@@ -1,0 +1,14 @@
+url voor covers : https://openlibrary.org/dev/docs/api/covers
+
+connect-PnPOnline -url https://vlapa.sharepoint.com/sites/DemoSite -Credentials $cred
+
+Add-PnPListItem -List "Aanwinsten" -ContentType Item -values @{'Titel' = 'test'; 'IDLimo' = 'hjhjkhkh'; }
+
+http://resolver.libis.be/l/ingests/5?token=CACHED&institution=VLP&from=0&step=99999
+
+$result = Invoke-RestMethod -Uri "http://resolver.libis.be/l/ingests/3?token=CACHED&institution=VLP&from=0&step=99999"
+
+ $tags='Book','Website'
+
+
+Add-PnPListItem -List "Aanwinsten" -ContentType Item -values @{'Title' = 'Bart'; 'IDLimo'='tester'; 'Tag' = $tags} -ErrorAction SilentlyContinue
