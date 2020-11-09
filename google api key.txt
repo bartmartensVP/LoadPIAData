@@ -1,0 +1,9 @@
+xxxxxxxxxxx
+
+
+get book :
+
+$u = "https://www.googleapis.com/books/v1/volumes?q=9789046608760&maxResults=20"
+$c = (irm $u)
+$d = (irm $c.items[0].selfLink)
+$d.volumeInfo.imageLinks.extraLarge
