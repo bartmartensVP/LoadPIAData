@@ -1,6 +1,6 @@
 $username="sa.automate@vlaamsparlement.be"
 $password = "zqLtp9AL"
-$siteUrl = "https://vlapa.sharepoint.com/sites/DemoSite"
+$siteUrl = "https://vlapa.sharepoint.com/sites/Informatie"
 $encpassword = convertto-securestring -String $password -AsPlainText -Force
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username, $encpassword
 connect-PnPOnline -url $siteUrl -Credentials $cred
